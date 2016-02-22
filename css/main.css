@@ -1,5 +1,6 @@
 @import url(http://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700);
 @import url(http://fonts.googleapis.com/css?family=Cardo:400,400italic,700);
+
 /* ==========================================================================
 Typography
 ========================================================================== */
@@ -907,7 +908,6 @@ section#timeline article div.inner span.date span.year {
 
 section#timeline article div.inner div.timelineContent{
   visibility: visible;
-  overflow: hidden;
 }
 
 
@@ -975,4 +975,28 @@ section#timeline article:nth-child(5) div.inner h2 {
 }
 section#timeline article:nth-child(5) div.inner h2:after {
   background: #9b59b6;
+}
+
+
+/* ==========================================================================
+  $Media Queries
+========================================================================== */
+
+@media only screen and (max-width:500px){
+
+  section#timeline article div.inner span.date{
+   left:10px;
+
+   }
+  section#timeline article div.inner{
+    float:right;
+    width:80%;
+  }
+  section#timeline:before {
+    left: 10px;
+  }
+  section#timeline article div.inner h2:after{
+    left:-5px;
+  }
+
 }
