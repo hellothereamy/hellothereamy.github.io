@@ -75,7 +75,9 @@
       font-size: 40px; }
       .banner-text p {
     font-size: 30px;
-} }
+}
+ 
+}
 @media screen and (max-width: 320px) {
   .banner-text {
     padding-top: 55%; }
