@@ -72,7 +72,10 @@
   .banner-text {
     padding-top: 45%; }
     .banner-text h1 {
-      font-size: 32px; } }
+      font-size: 40px; }
+      .banner-text p {
+    font-size: 30px;
+} }
 @media screen and (max-width: 320px) {
   .banner-text {
     padding-top: 55%; }
