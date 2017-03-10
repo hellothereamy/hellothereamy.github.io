@@ -76,8 +76,16 @@ ul, ol {
 ul li {
   list-style: none; }
 
+ul.bullet li {
+  list-style: circle; 
+  margin-left: 30px !important;
+}
 .section {
   padding: 40px 0; }
+
+.project-section {
+  padding: 20px 0;
+}
 
 .no-padding {
   padding: 0; }
@@ -85,6 +93,40 @@ ul li {
 .no-gutter [class*=col-] {
   padding-right: 0;
   padding-left: 0; }
+
+#content {
+  padding: 0px 25px 0px 25px;
+}
+
+.img-responsive.project-page {
+  max-width: 150%;
+}
+#projects .container-fluid .row .work .work-box img.img-responsive {
+  height: 100%;
+  margin: 0 auto;
+}
+.next-project.img-responsive{
+  max-width: 30% !important;
+  margin: auto;
+}
+#projects .row {
+  height: 350px;
+}
+
+.p-section {
+  margin-bottom: 20px !important;
+}
+.margin-bottom {
+  margin-bottom: 15px !important;
+}
+.little-margin-bottom {
+  margin-bottom: 15px !important;
+}
+
+#gif {
+  width: 40%;
+}
+
 
 /* ==========================================================================
 	$Header
@@ -97,7 +139,7 @@ ul li {
     border-bottom: 1px solid rgba(255, 255, 255, 0.15);
     margin: 0 auto;
     max-width: 1170px;
-    padding: 40px 0;
+    padding: 20px;
     width: 100%;
     -moz-transition: padding 0.3s;
     -o-transition: padding 0.3s;
@@ -108,7 +150,8 @@ ul li {
   }
 
 .logo img{
-  width:100px;
+  width:80px;
+  margin-left: 10px;
 }
 
 #header.fixed {
@@ -118,6 +161,10 @@ ul li {
     padding: 25px 0; }
   #header.fixed .nav-toggle {
     top: 18px; }
+
+.primary-nav {
+  margin-right: 20px;
+}
 
 .navigation.open {
   opacity: 0.9;
@@ -269,19 +316,19 @@ ul li {
 	$Banner
 ========================================================================== */
 .banner {
-  background-image: url(../images/background3.jpg);
- 
+  // background-image: url(../images/bg4.png);
+  background-color: #2b445e;
   background-position: center top;
   background-repeat: no-repeat;
   -moz-background-size: cover;
   -o-background-size: cover;
   -webkit-background-size: cover;
   background-size: cover;
-  min-height: 750px; 
+  min-height: 450px; 
  }
 
 .banner-text {
-  padding-top: 25%; 
+  padding-top: 10%; 
   }
   .banner-text h1 {
     color: #fff;
@@ -289,6 +336,9 @@ ul li {
     font-weight: 700;
     margin-top: 50px;
     text-transform: uppercase; }
+  .banner-text h2 {
+    color: #9d9d9d !important;
+  }
   .banner-text p {
     color: #80deea;
     font-size: 45px;
@@ -296,6 +346,9 @@ ul li {
     line-height: 1.5;
     margin-bottom: 80px; }
 
+    .project-banner {
+      min-height: 84px !important;
+    }
 /* ==========================================================================
 	$Features
 ========================================================================== */
@@ -391,10 +444,15 @@ ul li {
     font-weight: 400;
     margin-bottom: 20px; }
 
+.social-icons span {
+  padding-top: 10px;
+}
+
 .social-icons, .footer .footer-share {
   margin-top: 30px; 
   text-align: center;}
   .social-icons li, .footer .footer-share li {
+
     float: left; }
   .social-icons a, .footer .footer-share a {
     border: 1px solid #e8ecee;
@@ -414,6 +472,9 @@ ul li {
       border-color: #e84545;
       color: #fff; }
 
+  .footer-share span {
+      padding-top: 10px;
+  }
 /* ==========================================================================
 	$Testimonials
 ========================================================================== */
@@ -846,141 +907,168 @@ ul li {
   content: "\e063"; }
 
 /* ==========================================================================
-  $Timeline
+  Timeline
 ========================================================================== */
-
-section#timeline {
-  width: 80%;
-  margin: 20px auto;
+#cd-timeline {
   position: relative;
+  padding: 2em 0;
+  margin-top: 2em;
+  margin-bottom: 2em;
 }
-section#timeline:before {
+#cd-timeline::before {
+  /* this is the vertical line */
   content: '';
-  display: block;
   position: absolute;
-  left: 50%;
   top: 0;
-  margin: 0 0 0 -1px;
-  width: 2px;
+  left: 18px;
   height: 100%;
-  background: #e6e6e6;
+  width: 4px;
+  background: #d7e4ed;
 }
-section#timeline article {
-  width: 100%;
-  margin: 0 0 20px 0;
-  position: relative;
-}
-section#timeline article:after {
-  content: '';
-  display: block;
-  clear: both;
-}
-section#timeline article div.inner {
-  width: 40%;
-  float: left;
-  margin: 5px 0 0 0;
-  border-radius: 6px;
-}
-section#timeline article div.inner span.date {
-  display: block;
-  width: 60px;
-  height:60px;
-  padding: 10px 0;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  margin: 0 0 0 -32px;
-  border-radius: 100%;
+
+
+
+/* TIMELINE
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.timeline .comp-info {
   font-size: 12px;
-  font-weight: 900;
-  text-transform: uppercase;
-  background: #25303B;
-  color: rgba(255,255,255,0.5);
-  box-shadow: 0 0 0 7px #25303B;
+  font-style: italic;
 }
-section#timeline article div.inner span.date span {
-  display: block;
-  text-align: center;
+.timeline ul.time-info {
+  margin-left: 20px;
 }
-
-section#timeline article div.inner span.date span.month {
-  font-size: 18px;
+.timeline ul.time-info li{
+  list-style-type: circle;
 }
-section#timeline article div.inner span.date span.year {
-  font-size: 10px;
-}
-
-section#timeline article div.inner div.timelineContent{
-  visibility: visible;
-}
-
-
-
-section#timeline article div.inner h2 {
-  padding: 15px;
-  margin: 0;
-  color: #fff;
-  font-size: 20px;
-  text-transform: uppercase;
-  text-align: center;
-  letter-spacing: -1px;
-  border-radius: 6px 6px 0 0;
+.timeline ul li.time {
+  list-style-type: none;
   position: relative;
+  width: 3px;
+  margin: 0 auto;
+  padding-top: 50px;
+  background: #eee;
 }
-section#timeline article div.inner h2:after {
+
+.timeline ul li.time::after {
   content: '';
   position: absolute;
-  top: 20px;
-  right: -5px;
-    width: 10px; 
-    height: 10px;
-  -webkit-transform: rotate(-45deg);
-}
-section#timeline article div.inner .text {
-  padding: 15px;
-  margin: 0;
-  font-size: 14px;
-  background: #f2f2f2;
-  color: #656565;
-  border-radius: 0 0 6px 6px;
-}
-section#timeline article:nth-child(2n+2) div.inner {
-  float: right;
-}
-section#timeline article:nth-child(2n+2) div.inner h2:after {
-  left: -5px;
-}
-section#timeline article:nth-child(1) div.inner h2 {
-  background: #e74c3c;
-}
-section#timeline article:nth-child(1) div.inner h2:after {
-  background: #e74c3c;
-}
-section#timeline article:nth-child(2) div.inner h2 {
-  background: #2ecc71;
-}
-section#timeline article:nth-child(2) div.inner h2:after {
-  background: #2ecc71;
-}
-section#timeline article:nth-child(3) div.inner h2 {
-  background: #e67e22;
-}
-section#timeline article:nth-child(3) div.inner h2:after {
-  background: #e67e22;
-}
-section#timeline article:nth-child(4) div.inner h2 {
-  background: #1abc9c;
-}
-section#timeline article:nth-child(4) div.inner h2:after {
-  background: #1abc9c;
-}
-section#timeline article:nth-child(5) div.inner h2 {
-  background: #9b59b6;
-}
-section#timeline article:nth-child(5) div.inner h2:after {
-  background: #9b59b6;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: inherit;
 }
 
+.timeline ul li.time div {
+  position: relative;
+  bottom: 0;
+  width: 400px;
+  padding: 15px;
+  border: 1px solid #F45B69;
+}
+
+.timeline ul li.time div::before {
+  content: '';
+  position: absolute;
+  bottom: 7px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.timeline ul li.time:nth-child(odd) div {
+  left: 45px;
+}
+
+.timeline ul li.time:nth-child(odd) div::before {
+  left: -16px;
+  border-width: 8px 16px 8px 0;
+  border-color: transparent #F45B69 transparent transparent;
+}
+
+.timeline ul li.time:nth-child(even) div {
+  left: -439px;
+}
+
+.timeline ul li.time:nth-child(even) div::before {
+  right: -15px;
+  border-width: 8px 0 8px 16px;
+  border-color: transparent transparent transparent #F45B69;
+}
+
+time {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+
+/* EFFECTS
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.timeline ul li::after {
+  transition: background .5s ease-in-out;
+}
+
+.timeline ul li.in-view::after {
+  // background: #F45B69;
+  border: 1px solid #F45B69;
+  background: white;
+}
+
+.timeline ul li div {
+  visibility: hidden;
+  opacity: 0;
+  transition: all .5s ease-in-out;
+}
+
+.timeline ul li:nth-child(odd) div {
+  transform: translate3d(200px, 0, 0);
+}
+
+.timeline ul li:nth-child(even) div {
+  transform: translate3d(-200px, 0, 0);
+}
+
+.timeline ul li.in-view div {
+  transform: none;
+  visibility: visible;
+  opacity: 1;
+}
+
+
+/* GENERAL MEDIA QUERIES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+@media screen and (max-width: 900px) {
+  .timeline ul li div {
+    width: 250px;
+  }
+  .timeline ul li:nth-child(even) div {
+    left: -289px;
+    /*250+45-6*/
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .timeline ul li {
+    margin-left: 20px;
+  }
+  .timeline ul li div {
+    width: calc(100vw - 91px);
+  }
+  .timeline ul li:nth-child(even) div {
+    left: 45px;
+  }
+  .timeline ul li:nth-child(even) div::before {
+    left: -15px;
+    border-width: 8px 16px 8px 0;
+    border-color: transparent #F45B69 transparent transparent;
+  }
+}
 
 /* ==========================================================================
   $Media Queries
@@ -1021,8 +1109,27 @@ html, body
 
 div.work{
     min-height:150px;
-
   }
+}
 
-
+.typed-cursor{
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
 }

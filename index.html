@@ -1,8 +1,9 @@
-<!doctype html>
+<!doctype html ng>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+<!--[if gt IE 8]><!--> <!--<![endif]-->
+<html class="no-js" lang="" ng-app="app"> 
 <head>
     <meta charset="utf-8">
     <meta name="description" content="">
@@ -14,19 +15,21 @@
     <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link rel="stylesheet" href="css/flexslider.css">
     <link rel="stylesheet" href="css/jquery.fancybox.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/responsive.css">
-    <link rel="stylesheet" href="css/animate.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.min.js"></script>
+    <script type="text/javascript" src="bower_components/angular-ui-scrollpoint/dist/scrollpoint.js"></script>
 </head>
-<body>
-   
-	<section class="banner" role="banner">
+<body ng-controller="amyWebsiteCtrl">
+   <!-- banner -->
+<section class="banner" role="banner">
         <header id="header">
             <div class="header-content clearfix">
-                <a class="logo" href="#"><img src="images/myLogo2.png" alt=""></a>
+                <a class="logo" href="http://hellothereamy.github.io/"><img src="images/myLogo2.png" alt=""></a>
                 <nav class="navigation" role="navigation">
                     <ul class="primary-nav">
                         <li><a href="#about">About</a></li>
@@ -41,38 +44,32 @@
         <div class="container">
             <div class="col-md-10 col-md-offset-1">
                 <div class="banner-text text-center">
-                    <h1>Amy Tran</h1>
-                    <p>Create  <i class="fa fa-times"></i> Code</p>
+                    <h1>Hello There!</h1>
+                        <h2><span class="element"></span></h2>
                 </div><!-- banner text -->
             </div>
         </div>
-    </section><!-- banner -->
-    
+</section>
+<div id="content">      
     <section id="about" class="about section">
         <!-- About title -->
         <section id="about" class="section">
-        <div class="container">
-            <div class="col-md-8 col-md-offset-2 text-center">
-                <h3>About</h3>
-            </div>
-        </div>
+          <div class="container">
+              <div class="col-md-8 col-md-offset-2 text-center">
+                  <h3>About</h3>
+              </div>
+          </div>
         </section>
         <div class="container">
             <div class="row">
                 <div class="col-md-4 col-lg-3 col-sm-12">
                     <div class="person">
-                        <img src="images/profilePhoto.jpg" alt="" class="img-responsive">
+                        <img src="images/profile-photo.jpg" alt="" class="img-responsive">
                         <div class="person-content">
                             <h4>Amy Tran</h4>
-                            <!-- <h5 class="role">Front-end. UI/UX. Interactive Design.</h5> -->
-                                <!-- <span class="icon icon-map-pin icon-list"> Bay Area, CA</span><br>
-                                <span class="icon icon-ribbon icon-list"> Santa Clara University <br> B.S. Web Design and Engineering</span> --> 
-              
                             <p>Hello!
-                             I am a new graduate seeking to gain experience in front-end development and product design. I have a passion for building enriching and elegant user interfaces. I am most happy when I'm creating.
+                             I am a new graduate seeking to gain experience in UI/UX design and UI/frontend development. I have a passion for building enriching and elegant user interfaces along with thoughtful user experiences. I am most happy when I'm creating.
                             </p>
-
-
                         </div>
                         <ul class="social-icons text-center clearfix">
                             <li><a href="mailto:trannguyen.amy@gmail.com"><span class="fa fa-envelope"></span></a></li>
@@ -85,266 +82,186 @@
                 </div>
                 <div class="col-md-8 col-lg-9 col-sm-12">
                   <div class="row">
-                    <div class="col-md-3 col-sm-6 col-xs-12 col-lg-6 feature text-center">
+                    <div class="col-md-6 col-sm-6 col-xs-12 col-lg-6 feature text-center">
                         <span class= "icon icon icon-lightbulb"></span>
                         <div class="feature-content">
                             <h5>Programming Languages</h5>
-                            <h4>JavaScript, HTML/CSS, Ruby, jQuery, PHP, MySQL, C, Github</h4>
+                            <h4>HTML/CSS/LESS, JavaScript, Github</h4>
                         </div>
                     </div>
-                    <div class="col-md-3 col-sm-6 col-xs-12 col-lg-6 feature text-center">
+                    <div class="col-md-6 col-sm-6 col-xs-12 col-lg-6 feature text-center">
                         <span class="icon icon-layers"></span>
                         <div class="feature-content">
                             <h5>Frameworks</h5>
-                            <h4>Ember.js, Materialize CSS, BootStrap</h4>
+                            <h4>AngularJS, Bootstrap</h4>
                         </div>
                     </div>
                   </div>
                   <div class="row">
                 
-                    <div class="col-md-3 col-sm-6 col-xs-12 col-lg-6 feature text-center">
+                    <div class="col-md-6 col-sm-6 col-xs-12 col-lg-6 feature text-center">
                         <span class="icon icon-pencil"></span>
                         <div class="feature-content">
                             <h5>Creative Applications</h5>
-                            <h4>Adobe Photoshop, Adobe Illustrator</h4>
+                            <h4>Sketch, Balsamiq, Adobe Illustrator and Photoshop</h4>
                         </div>
                     </div>
-                    <div class="col-md-3 col-sm-6 col-xs-12 col-lg-6 feature text-center">
+                    <div class="col-md-6 col-sm-6 col-xs-12 col-lg-6 feature text-center">
                         <span class="icon icon-heart"></span>
                         <div class="feature-content">
                             <h5>Interests</h5>
-                            <h4>Front-End, UI/UX, Product/Interactive Design</h4>
+                            <h4>UI/UX,Product,Interactive Design, Front-End Development</h4>
                         </div>
                     </div>
                   </div>
                 </div>
             </div>
         </div>
-      </div>
-</section>
+    </section>
 
     <!-- work experience title -->
 
- <section id="work" class="section">
-        <div class="container">
-            <div class="col-md-8 col-md-offset-2 text-center">
-                <h3>Work Experience</h3>
-            </div>
-        </div>
-    </section>
-
-
-<!-- timeline-->
-
-<section id="timeline">
-   <article>
-      <div class="inner">
-           <span data-id="zepp" class="date">
-              <span class="month">April</span>
-              <span class="year">2014</span>
-          </span>
-        <div id="zepp" class="timelineContent">
-            <h2>Zepp Labs</h2>
-            <div class="text">
-                <h4 class="text-center"> Customer Support and Operations Intern</h4>
-                <p class="text-center"> April 2014 – April 2015</p>
-                <ul>
-                    <li> - Addressed customer inquiry tickets promptly and effectively, resulting in high feedback survey scores. </li><br>
-                    <li> - Improved customer support content by designing and creating a series of support video tutorials. </li><br>
-                    <li> - Collaborated with customer support team to successfully launch LiveChat support.</li><br>
-                    <li> - Product tested and reported bugs to the respective team.</li><br>
-               </ul>
-            </div>
-       </div>
+   <section id="work" class="section">
+      <div class="container">
+          <div class="col-md-8 col-md-offset-2 text-center">
+              <h3>Work Experience</h3>
+          </div>
       </div>
-  </article>
-  <article>
-    <div class="inner">
-      <span data-id="lev" class="date">
-        <span class="month">Jun</span>
-        <span class="year">2015</span>
-      </span>
-      <div id="lev" class="timelineContent">
-          <h2>Levanto Financial</h2>
-          <div class="text">
-           <h4 class="text-center"> Software Development and Marketing Intern</h4>
-              <p class="text-center"> Jun 2015 – Dec 2015</p>
-              <ul>
-                  <li> - Assisted in developing an on-boarding web application by building components using Ember.js framework. Application allowed users to input financial data and the application forecasted potential savings. </li><br>
-                  <li> - Designed the layout and graphics for clients’ financial budget sheet, as well mobile app mockups, resulting in a more visually appealing product and an enhanced user experience. </li><br>
-                  <li> - Created marketing materials such as emails and flyers, using Adobe Illustrator and Photoshop.</li><br>
-             </ul>
-        </div>
-     </div>
-    </div>
-  </article>
-  <article>
-    <div class="inner">
-      <span data-id="grad" class="date">
-        <span class="month">Jun</span>
-        <span class="year">2016</span>
-      </span>
-      <div id="grad" class="timelineContent">
-          <h2>Graduated Santa Clara University</h2>
-          <div class="text">
-           <p class="text-center"> (After many cups of coffee)</p>
-           <h4 class="text-center"> B.S. In Web Design and Engineering</h4>
-              <p class="text-center"> Sept 2012 – Jun 2016</p>
-              <p class="text-center"> Minor in Mathematics </p>
-        </div>
-     </div>
-    </div>
-  </article> 
-  </section> 
+  </section>
 
-    <!-- projects title -->
-
- <section id="projects" class="section">
-        <div class="container">
-            <div class="col-md-8 col-md-offset-2 text-center">
-                <h3>Projects</h3>
-            </div>
+  <section class="timeline">
+    <ul>
+      <li class="time">
+        <div>
+          <h3>BrightFunnel</h3>
+          <time>July 2016 - Present</time> 
+          <p class="comp-info">BrightFunnel is a B2B marketing attribution and forecasting SaaS company that gives marketers powerful insights to marketing's impact on revenue.</p>
+          <ul class="time-info">
+            <li> Proficient in AngularJS and JavaScript through developing new product features as well as maintaining and modularizing application code.</li>
+            <li> Skilled in HTML/CSS through developing UI components daily.</li>
+            <li> Knowledgable of UI/UX &amp; design principles from creating wireframes with Balasmiq and Sketch.
+            <li> Developed in an agile (2 week spirits) environment.</li>
+            <li>Used Github daily to commit and maintain code.</li>
+          </ul>
         </div>
-    </section>
+      </li>
+      <li class="time">
+        <div>
+          <h3>Graduated Santa Clara University</h3><time>Sept 2012 - Jun 2016</time> 
+           <p> (After many cups of coffee)</p>
+               <p> B.S. In Web Design and Engineering<br>
+               Minor in Mathematics </p>
+        </div>
+      </li>
+      <li class="time">
+        <div>
+          <h3> Levanto Financial </h3> <time> June 2015 - Sept 2015</time> 
+              <p class="comp-info">Levanto Financial is a household CFO service that helps users make financial decisions with confidence.</p>
+            <ul class="time-info">
+              <li>Exhibited UI &amp; design skills through designing the chat feature of the mobile app using Adobe Photoshop.</li>
+             <li> Created marketing graphics with Adobe Illustrator.</li>
+            </ul>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+      <!-- projects title -->
+
+   <section id="projects" class="section">
+      <div class="container">
+          <div class="col-md-8 col-md-offset-2 text-center">
+              <h3>Projects</h3>
+          </div>
+      </div>
+  </section>
+
     <!-- Projects -->
-
-    <section id="works" class="works section no-padding">
-        <div class="container-fluid">
-            <div class="row">
-            <!-- <div class="row no-gutter"> -->
-                <div class="work col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                    <a href="images/Planlybg.jpg" class="work-box">
-                        <img src="images/Planlybg.jpg" class="img-responsive" alt="">
-                        <div class="overlay">
-                            <div class="overlay-caption">
-                                <h5>Planly</h5>
-                                <p>Collaborative Project Management Application</p>
-                            </div>
-                        </div><!-- overlay -->
-                    </a>
-                 </div>
-              <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                <h3>Planly</h3>
-                <h4>Collaborative Project Management Application</h4>
-                <p>(Work in Progress)</p>
-                <p> Individuals currently live in a society that revolves around productivity. We built Planly to help small teams become organized.</p>
-                <h5> Technologies Used </h5>
-                <ul>
-                    <li>Ember.js</li>
-                    <li>HTML &amp; Materialize CSS</li>
-                    <li>FireBase</li>
-                    <li>GitHub</li>
-                </ul>
-                <br>
-
-                <a target="_blank" class="btn btn-primary" href="planly.firebaseapp.com">View Project </a>
-
+  <section id="projects" class="works section no-padding">
+          <div class="container-fluid">
+              <div class="row">
+              <!-- <div class="row no-gutter"> -->
+                  <div class="work col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                      <a href="/global-filters.html" class="work-box">
+                          <img src="images/globalfilters.png" class="img-responsive" alt="">
+                          <div class="overlay">
+                              <div class="overlay-caption">
+                                  <h5>Global Filters</h5>
+                              </div>
+                          </div><!-- overlay -->
+                      </a>
+                   </div>
+                   <div class="work col-lg-4 col-md-4 col-sm-12 col-xs-12 ">
+                       <a href="/roomies.html" class="work-box">
+                           <img src="images/roomiesScreen.png" class="img-responsive" alt="">
+                           <div class="overlay">
+                               <div class="overlay-caption">
+                                   <h5>Roomies</h5>
+                                   <!-- <p>Recycling Information Website</p> -->
+                               </div>
+                           </div><!-- overlay -->
+                       </a>
+                    </div>
+                    <div class="work col-lg-4 col-md-4 col-sm-12 col-xs-12 ">
+                        <a href="/nav-animations.html" class="work-box">
+                            <img src="images/nav.png" class="img-responsive" alt="">
+                            <div class="overlay">
+                                <div class="overlay-caption">
+                                    <h5>Navigation Icon Animation</h5>
+                                    <!-- <p>Recycling Information Website</p> -->
+                                </div>
+                            </div><!-- overlay -->
+                        </a>
+                     </div>
+                </div>
             </div>
-        </div>
-        <br>
-             <div class="row">
-                 <div class="work col-lg-6 col-md-6 col-sm-6 col-xs-12 ">
-                     <a href="images/recyclebots.jpg" class="work-box">
-                         <img src="images/recyclebots.jpg" class="img-responsive" alt="">
-                         <div class="overlay">
-                             <div class="overlay-caption">
-                                 <h5>Recycle Bots</h5>
-                                 <p>Recycling Information Website</p>
-                             </div>
-                         </div><!-- overlay -->
-                     </a>
+          <br>
+      </section>
+   <section id="contact" class="section">
+          <div class="container">
+              <div class="col-md-8 col-md-offset-2 text-center">
+                  <h3>Contact me!</h3>
+                  <p>I would love to hear from you!</p>
+                  <a href="mailto:trannguyen.amy@gmail.com" class="btn btn-large">Hello Amy</a>
+              </div>
+          </div>
+  </section><!-- download -->
+</div> <!-- content div --> 
+  <footer class="footer">
+      <div class="footer-top">
+          <div class="container">
+              <div class="row">
+                  <div class="footer-col col-md-4">
+                      <h5>Location</h5>
+                      <p>Bay Area, CA</p>
                   </div>
-               <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12">
-                 <h3>Recycle Bots</h3>
-                 <h4>Recycling Information Website</h4>
-                 <p>Recycle Bots is an educational website that aims to not only teach about recycle through forums and games, but also to contribute to recycling efforts through an online store.</p>
-                 <h5> Technologies Used </h5>
-                <ul>
-                    <li>HTML &amp; CSS &amp; BootStrap</li>
-                    <li>JavaScript</li>
-                    <li>jQuery</li>
-                    <li>AJAX</li>
-                    <li>MySQL</li>
-                </ul>
-                <br>
-                 <a target="_blank" class="btn btn-primary" href="http://students.engr.scu.edu/~atran2/recyclebots/finalindex.html">View Project </a>
-                </div>
-
-            </div>
-             <div class="row">
-                 <div class="work col-lg-6 col-md-6 col-sm-6 col-xs-12 ">
-                     <a href="images/norm.png" class="work-box">
-                         <img src="images/norm.png" class="img-responsive" alt="">
-                         <div class="overlay">
-                             <div class="overlay-caption">
-                                 <h5>Norm</h5>
-                                 <p>Review Sentiment Aggregation Application</p>
-                             </div>
-                         </div><!-- overlay -->
-                     </a>
+                  <div class="footer-col col-md-4">
+                      <h5>Be Social</h5>
+                      <ul class="footer-share">
+                          <li><a href="mailto:trannguyen.amy@gmail.com"><span class="fa fa-envelope"></span></a></li>
+                          <li><a  target="_blank" href="https://www.linkedin.com/in/amyntran"><span class="fa fa-linkedin"></span></a></li>
+                          <li><a  target="_blank" href="https://github.com/hellothereamy"><span class="fa fa-github"></span></a></li>
+                          <li><a  target="_blank" href="http://www.yelp.com/user_details?userid=hRhrnk4sI9Q-BKQFcj_-zg"><span class="fa fa-yelp"></span></a></li>
+                      </ul>
                   </div>
-               <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12">
-                 <h3>Norm</h3>
-                 <h4>Review Sentiment Aggregation Application</h4>
-                 <p>Norm was aimed at helping small businesses. Norm detects the sentiment of words in user reviews and displays the data to the user. With Norm, my team and I won 2nd place at the BroncoHacks Hackthon! </p>
-                 <h5> Technologies Used </h5>
-                <ul>
-                    <li>HTML &amp; CSS &amp; Materialize</li>
-                    <li> AngularJS </li>
-                    <li>JavaScript</li>
-                </ul>
-                <br>
-                 <a target="_blank" class="btn btn-primary" href="https://secure-lake-34968.herokuapp.com/">View Project </a>
-                </div>
-
-            </div>
-        </div> <!--end of container fluid -->
-
- <section id="contact" class="section">
-        <div class="container">
-            <div class="col-md-8 col-md-offset-2 text-center">
-                <h3>Contact me!</h3>
-                <p>I would love to hear from you!</p>
-                <a href="mailto:trannguyen.amy@gmail.com" class="btn btn-large">Hello Amy</a>
-            </div>
-        </div>
-    </section><!-- download -->
-
-    <footer class="footer">
-        <div class="footer-top">
-            <div class="container">
-                <div class="row">
-                    <div class="footer-col col-md-4">
-                        <h5>Location</h5>
-                        <p>Bay Area, CA</p>
-                    </div>
-                    <div class="footer-col col-md-4">
-                        <h5>Be Social</h5>
-                        <ul class="footer-share">
-                            <li><a href="mailto:trannguyen.amy@gmail.com"><span class="fa fa-envelope"></span></a></li>
-                            <li><a  target="_blank" href="https://www.linkedin.com/in/amyntran"><span class="fa fa-linkedin"></span></a></li>
-                            <li><a  target="_blank" href="https://github.com/hellothereamy"><span class="fa fa-github"></span></a></li>
-                            <li><a  target="_blank" href="http://www.yelp.com/user_details?userid=hRhrnk4sI9Q-BKQFcj_-zg"><span class="fa fa-yelp"></span></a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-col col-md-4">
-                        <h5>About Amy</h5>
-                        <p> Animal Lover. Amateur Foodie. Coffee Drinker. Outdoors Adventurer.</p>
-                    </div>
-                </div>
-            </div>
-        </div><!-- footer top -->
-        <div class="footer-bottom col-xs">
-            <div class="container">
-                <div class="col-md-12">
-                    <p>Copyright © 2016 Amy. All Rights Reserved<br>Made with <i class="fa fa-heart pulse"></i> by Amy Tran</a></p>
-                </div>
-            </div>
-        </div>
-    </footer><!-- footer -->
-
+                  <div class="footer-col col-md-4">
+                      <h5>About Amy</h5>
+                      <p> Animal Lover. Amateur Foodie. Coffee Drinker. Outdoors Adventurer.</p>
+                  </div>
+              </div>
+          </div>
+      </div><!-- footer top -->
+      <div class="footer-bottom col-xs">
+          <div class="container">
+              <div class="col-md-12">
+                 <!--  <p>Copyright © 2016 Amy. All Rights Reserved --><br>Made with <i class="fa fa-heart animated infinite pulse"></i> by Amy Tran</a></p>
+              </div>
+          </div>
+      </div>
+  </footer><!-- footer -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>
+    <script src="bower_components/typed.js/js/typed.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.flexslider-min.js"></script>
     <script src="js/jquery.fancybox.pack.js"></script>
@@ -353,9 +270,17 @@
     <script src="js/modernizr.js"></script>
     <script src="js/main.js"></script>
     <script>
-    $('.date').click(function()){
-        $('#'$(this.data)('id')).show();
-    };
+        $(function(){
+            $(".element").typed({
+                strings: [ "I'm Amy","I am..","User obsessed", "UI/Front-end developer", "Design enthusiast","Amateur foodie","Crossfit noobie", " I'm Amy Tran" ],
+                typeSpeed: 0
+            });
+        });
+    </script>
+    <script>
+    $('.date').click(function(){
+        $('#'+$(this.data)+('id')).show();
+    });
     </script>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
@@ -367,5 +292,7 @@
         ga('create', 'UA-XXXX-X');
         ga('send', 'pageview');
     </script>
+    <script src="../js/app.js"></script>
+    <script src="../js/amyWebsite-ctrl.js"></script>
 </body>
 </html>
