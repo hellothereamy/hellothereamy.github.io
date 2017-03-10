@@ -1042,8 +1042,34 @@ time {
 
 /* GENERAL MEDIA QUERIES
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-
 @media screen and (max-width: 900px) {
+  // .timeline ul li.time div {
+  //   max-width: 300px;
+  // }
+  // .timeline ul li div {
+  //   width: 250px;
+  // }
+  // .timeline ul li:nth-child(even) div {
+  //   left: -289px;
+    /*250+45-6*/
+  // }
+}
+
+@media screen and (max-width: 992px) {
+  .timeline ul li.time {
+    margin: 0;
+  }
+
+  .timeline ul li.time:nth-child(even) div {
+    left: 45px; 
+  }
+
+  .timeline ul li.time:nth-child(even) div::before {
+    left: -16px;
+    border-width: 8px 16px 8px 0;
+    border-color: transparent #F45B69 transparent transparent;
+ }
+
   .timeline ul li div {
     width: 250px;
   }
