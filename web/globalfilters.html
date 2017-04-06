@@ -1,0 +1,272 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<!--fonts-->
+		<link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+	<!--//fonts-->
+		<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+		<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+	<!-- for-mobile-apps -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+	<!-- //for-mobile-apps -->
+	<!-- js -->
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+	<!-- js -->
+	<!-- start-smooth-scrolling -->
+		<script type="text/javascript" src="js/move-top.js"></script>
+		<script type="text/javascript" src="js/easing.js"></script>
+		<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){		
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+				});
+			});
+		</script>
+	<!-- start-smooth-scrolling -->
+
+</head>
+<body>
+<!-- banner -->
+<div class="banner page-head" id="home">
+	<div class="container"> 
+		<div class="top-header row">
+			<script src="js/classie.js"></script>
+			<!--top-nav---->
+		<!-- 	<div class="logo">
+				<a href="index.html"><img src="images/logo.png" alt=""/></a>
+			</div> -->
+			<div class="top-nav">
+				<div class="nav-icon">
+					    <a href="#" class="right_bt" id="activator"><span> </span> </a>
+				</div>
+				<div class="box" id="box">
+					<div class="box_content">        					                         
+						<div class="box_content_center">
+							<div class="form_content">
+								<div class="menu_box_list">
+									<ul>
+										<li><a href="index.html"><span>home</span></a></li>
+										<li><a href="index.html"><span>skills</span></a></li>
+										<li><a href="index.html"><span>education</span></a></li>
+										<li><a href="index.html"><span>work</span></a></li>
+										<li><a href="index.html"><span>portfolio</span></a></li>
+										<li><a href="index.html"><span>contact</span></a></li>
+										<div class="clearfix"> </div>
+									</ul>
+								</div>
+								<a class="boxclose" id="boxclose"> <span> </span></a>
+							</div>                                  
+						</div> 	
+					</div> 
+				</div>       	  
+			</div>
+			<!---start-click-drop-down-menu----->
+			        <!----start-dropdown--->
+			         <script type="text/javascript">
+						var $ = jQuery.noConflict();
+							$(function() {
+								$('#activator').click(function(){
+									$('#box').animate({'top':'0px'},900);
+								});
+								$('#boxclose').click(function(){
+								$('#box').animate({'top':'-1000px'},900);
+								});
+							});
+							$(document).ready(function(){
+							//Hide (Collapse) the toggle containers on load
+							$(".toggle_container").hide(); 
+							//Switch the "Open" and "Close" state per click then slide up/down (depending on open/close state)
+							$(".trigger").click(function(){
+								$(this).toggleClass("active").next().slideToggle("slow");
+									return false; //Prevent the browser jump to the link anchor
+							});
+												
+						});
+					</script>
+			<!---//End-click-drop-down-menu----->
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+</div>
+<!--/header-banner-->
+<!--single-page-->
+	<div class="sample-page">
+		<div class="container">
+			<div class="sam-head text-center">
+				<h3>Global Filters</h3>
+				<div class="strip text-center"><img src="images/blog.png" alt=" "/></div>
+			</div>
+			<div class="col-xs-12 col-md-12">
+				<h2 class="port-title text-center"> Introduction and Motivation </h2>
+				 <p>Global filters is one of the most highly used features in the Brightfunnel application. The feature allows users to filter and narrow their data throughout the app. Because of the feature's importance, we decided that global filters needed a redesign as the current design was inhibiting its full potential. In the current design, we push global filters into a small corner; however, we quickly realized that filters were too complex to have such small screen real estate. My role in this project was to design the wireframes and develop the feature.</p>
+				 <br>
+				 <p class="margin-bottom">Current design of global filters: </p>
+				 <div class="row text-center large-margin-bottom">
+				 	 <img class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3" src="images/globalfilters/cropoldfilters.png">
+				 </div>
+                 <p>The problems that we wanted to address with the redesign were: </p> 
+                    <ul class="bullet">
+                      <li>Difficultly to recognize that filters are being applied in the app </li>
+                      <li>Cannot have filters panel open while using the app</li>
+                      <li>Users cannot tell which filters are currently applied without opening the panel</li>
+                      <li>It takes a minimum of 6 clicks to apply a filter </li>
+                      <li>Improve user experience</li>
+                  </ul>
+			</div>
+			<div class="col-xs-12 col-md-12">
+				<h2 class="port-title text-center"> Solution </h2>
+				 <p class="margin-bottom">Wireframes of the design: </p>
+				 <div class="row large-margin-bottom">
+					 <div class="col-xs-6 col-sm-4 col-sm-offset-2 col-md-3 col-md-offset-3">
+					 	<img class="max-width" src="images/globalfilters/filtersketch2.png">
+					 	<p class="italic">Mockup of filters summary panel</p>
+					 </div>
+					 <div  class="col-xs-6 col-sm-4 col-md-3  text-center">
+						<img class="max-width" src="images/globalfilters/filtersketch.png">
+						<p class="italic">Mockup of filters panel</p>
+					 </div>
+				 </div>
+				 <p class="margin-bottom">Final design (after development): </p>
+				 <div class="row large-margin-bottom">
+					 <div class="col-xs-6 col-md-5 col-md-offset-1 text-center">
+					 	<img class="final" src="images/globalfilters/globalfilters.png">
+					 	<p class="italic">Mockup of filters summary panel</p>
+					 </div>
+					 <div class="col-xs-6 col-md-5 text-center">
+						<img class="final" src="images/globalfilters/globalfilterpanel.png">
+						<p class="italic">Mockup of filters panel</p>
+					 </div>
+				 </div>
+				 <div class="col-xs-12 col-md-12">
+				 <p class="margin-bottom">In the new design: </p>
+				    <p>Originally, I had the summary panel in the upper right hand corner because users were familar with that location for global filters. However, I realized that it cluttered the top of the page and the filters could still be easily missed. Also, it would be awkward if a user clicked the summary panel and the global filters panel would slide out of the right side. Thus, I made the change in development to have a static filters summary panel on the right of the screen.</p>
+                    <ul class="bullet">
+                      <li> Added a static filter summary panel so users will always have a quick overview of their filters</li>
+                      <li> Included badges to make it obvious which filter and how many filters are applied</li>
+                      <li>Added a collapsible filter options panel. Since the options panel can  collaspe into the summary panel, it allows users to control their screen real estate</li>
+                      <li>Placed filter options in accordians for a cleaner and organized look</li>
+                      <li>It now takes a minimum of 5 clicks to apply a filter</li>
+                  </ul>
+                  </br>
+                   <p>Technologies used for project:  </p>
+                    <ul class="bullet">
+                      <li> Balasmiq for wireframes</li>
+                      <li> Angular JS, Bootstrap and HTML/LESS for development</li>
+                  </ul>
+			</div>
+		</div>
+		</div>
+			<div class="sample-page-right">
+				<div class="recent-posts">
+					<h2 class="port-title text-center"> Other Projects </h2>
+				<div class="row">
+					<div class="recent-posts-info col-sm-6 text-center">
+							<a href="#"> <img class="margin-bottom" src="images/img21.jpg" alt=""/> </a>
+							<div class="read-more">
+								<a href="#">Venmo Redesign</a>
+							</div>
+						<div class="clearfix"> </div>
+					</div>	
+					<div class="recent-posts-info col-sm-6 text-center">
+							<a href="#"> <img class="margin-bottom" src="images/img21.jpg" alt=""/> </a>
+							<div class="read-more">
+								<a href="#">Venmo Redesign</a>
+							</div>
+						<div class="clearfix"> </div>
+					</div>	
+				</div>
+					<!-- <div class="recent-posts-info">
+						<div class="posts-left">
+							<a href="#"> <img src="images/img20.jpg" alt=""/></a>
+						</div>
+						<div class="posts-right">
+							<label>MARCH 1, 2015</label>
+							<h5><a href="#">FINIBUS BONO</a></h5>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing incididunt.</p>
+							<div class="read-more">
+								<a href="#">Read More</a>
+							</div>
+						</div>
+						<div class="clearfix"> </div>
+					</div>	 -->
+				</div>
+			<!-- 	<div class="comments">
+					<h4>RECENT COMMENTS</h4>
+					<div class="comments-info">
+						<div class="cmnt-icon-left">
+							<a href="#"><img src="images/icon3.png" alt=""/></a>
+						</div>
+						<div class="cmnt-icon-right">
+							<p>MARCH 1, 2015</p>
+							<p><a href="#">Admin</a></p>
+						</div>
+						<div class="clearfix"> </div>
+						<p class="cmmnt">Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
+							sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					</div>
+					<div class="comments-info">
+						<div class="cmnt-icon-left">
+							<a href="#"><img src="images/icon3.png" alt=""/></a>
+						</div>
+						<div class="cmnt-icon-right">
+							<p>MARCH 1, 2015</p>
+							<p><a href="#">Admin</a></p>
+						</div>
+						<div class="clearfix"> </div>
+						<p class="cmmnt">Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
+							sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					</div>
+					<div class="comments-info">
+						<div class="cmnt-icon-left">
+							<a href="#"><img src="images/icon3.png" alt=""/></a>
+						</div>
+						<div class="cmnt-icon-right">
+							<p>MARCH 1, 2015</p>
+							<p><a href="#">Admin </a></p>
+						</div>
+						<div class="clearfix"> </div>
+						<p class="cmmnt">Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
+							sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					</div>
+				</div> -->
+			</div>
+			<div class="clearfix"> </div>
+		</div>	
+	</div>
+<!--//single-page-->
+<!--footer-->
+<div class="footer">
+	<div class="container">
+	</div>
+</div>
+<!--//footer-->
+<!-- here stars scrolling icon -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+				var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear' 
+				};
+			*/
+								
+			$().UItoTop({ easingType: 'easeOutQuart' });
+								
+			});
+	</script>
+<!-- //here ends scrolling icon -->
+</body>
+</html>
